@@ -1,0 +1,24 @@
+#home{
+    text-align: center;
+}
+.title{
+    text-align: center;
+    color:#da3528;
+    text-transform: uppercase;
+    font-size:56px;
+    letter-spacing: 10px;
+}
+#logo{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width:150px;
+}
+.MuiFormControl-root {
+    margin:20px !important;
+}
+button{
+    position: relative;
+    top:30px;
+}
+

@@ -1,0 +1,31 @@
+#header h1{
+    color:white;
+    background-color: rgb(105, 194, 105);
+    min-height: 150px;
+    font-size: 52px;
+}
+#nutriments{
+    display:flex;
+    justify-content: center;
+}
+#nutriments p{
+    color:white;
+    font-size:24px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    top:20px;
+}
+#nutriments div{
+    margin:20px;
+    background-color: rgb(105, 194, 105);
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+}
+#nutriments img{
+    position: relative;
+    top:30px;
+    width:70px;
+
+}
