@@ -13,12 +13,12 @@ export class Home extends Component {
             id:"",
             name:"",
             itemObj:{},
+            five:[],
 
         }
     }
-
      search(){
-        fetch('https://api.nutritionix.com/v1_1/search/'+this.state.input+'?results=0%3A20&cal_min=0&cal_max=50000&fields=item_name%2Cbrand_name%2Citem_id%2Cbrand_id&appId=bfa58bb1&appKey=32f09ffb63689c776bfa016ffc977997')
+        fetch('https://api.nutritionix.com/v1_1/search/'+this.state.input+'?results=0%3A20&cal_min=0&cal_max=50000&fields=item_name%2Cbrand_name=Unknown%2Citem_id%2Cbrand_id=526831133203b9c3390001c8&appId=bfa58bb1&appKey=32f09ffb63689c776bfa016ffc977997')
         .then((res)=>{
             if(res.status ===200){
                 return res.json()
@@ -26,29 +26,26 @@ export class Home extends Component {
                 return false;
             }
         })
-        .then(async (data)=>{
-         await this.setState({
+        .then((data)=>{
+            //Five elements for search bar toDO
+            // let i = 0;
+            // let five = []
+            // while(i<4){
+            //     five.push(data.hits[i]);
+            //     i++;
+            // }
+            // i=0
+            // console.log(five)
+            // five=[]
+
+            //Setting the id for sending to Item Component
+         this.setState({
                 id:data.hits[0].fields.item_id,
                 name:data.hits[0].fields.item_name
             })
         })
-        .then(()=>{
-                 console.log(this.state)
-            fetch('https://api.nutritionix.com/v1_1/item?id='+this.state.id+'&appId=bfa58bb1&appKey=32f09ffb63689c776bfa016ffc977997')
-            .then((res)=>{
-                if(res.status ===200){
-                    return res.json()
-                }else{
-                    return false;
-                }
-            })
-            .then((data)=>{
-                console.log(data)
-            })
-        })
     }
     render() {
-        console.log(this.state)
         return (
             <div id="home">
                 <h1 className="title" > The Perfect Meal</h1>
@@ -57,7 +54,8 @@ export class Home extends Component {
                 <Button variant="outlined" color="secondary" onClick={()=> this.search()}>
                     Search
                 </Button>
-                <Item />
+                <Item id={this.state.id} />
+                {this.state.five ? this.state.five :"Rien"}
             </div>
         )
     }
