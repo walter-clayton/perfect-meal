@@ -1,12 +1,17 @@
-#header h1{
+#header{
     color:white;
     background-color: rgb(105, 194, 105);
-    min-height: 150px;
-    font-size: 52px;
+    height: 180px;
+    font-size: 36px;
+    padding-bottom: 20px;
+    position: relative;
+    bottom:40px;
 }
 #nutriments{
     display:flex;
     justify-content: center;
+    position: relative;
+    bottom:40px;
 }
 #nutriments p{
     color:white;
@@ -28,4 +33,8 @@
     top:30px;
     width:70px;
 
+}
+#cal{
+    position:relative;
+    bottom:60px;
 }
