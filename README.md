@@ -3,4 +3,4 @@
 Simple application to track nutriments information easily.
 
 Front : React / Material UI
-Back : NodeJS / Express
+API used : Nutritionix v1.1
