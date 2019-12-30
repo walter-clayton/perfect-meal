@@ -17,8 +17,22 @@
 .MuiFormControl-root {
     margin:20px !important;
 }
-button{
-    position: relative;
-    top:30px;
+.MuiAutocomplete-inputRoot{
+    width:300px!important;
 }
-
+.MuiAutocomplete-root{
+    width: 300px !important;
+}
+#free{
+    text-align: center;
+}
+#form{
+    display: flex;
+    justify-content: center;
+}
+#form button{
+    height:50px;
+    position: relative;
+    top:23px;
+    left:23px;
+}
