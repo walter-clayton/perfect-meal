@@ -15,6 +15,7 @@ export class Home extends Component {
             name:"",
             itemObj:{},
             five:[],
+            listItem:[],
 
         }
     }
@@ -62,11 +63,12 @@ export class Home extends Component {
                     console.log(data)
                    try{this.setState({
                         item:{
+                            name:data.item_name,
                             cal:data.nf_calories,
-                            prot:data.usda_fields.PROCNT.value,
-                            fat:data.usda_fields.FAT.value,
-                            glu:data.usda_fields.CHOCDF.value,
-                            tot:data.usda_fields.PROCNT.value+data.usda_fields.FAT.value+data.usda_fields.CHOCDF.value    
+                            prot:data.nf_protein,
+                            fat:data.nf_total_fat,
+                            glu:data.nf_total_carbohydrate,
+                            tot:data.nf_protein+data.nf_total_fat+data.nf_total_carbohydrate    
                         }
                     })}
                     catch(err){
@@ -100,6 +102,14 @@ export class Home extends Component {
 
         })
     }
+    addItem(){
+        
+        let list=this.state.listItem;
+        list.push(this.state.item)
+        this.setState({
+            listItem:list
+        })
+    }
     render() {
         console.log(this.state)
         return (
@@ -121,8 +131,8 @@ export class Home extends Component {
                     Search
                 </Button>
                 </div>
-                <Item name={this.state.name} item={this.state.item} />
-                <ListItem />
+                <Item name={this.state.name} item={this.state.item} add={() => this.addItem()} />
+                <ListItem list={this.state.listItem} />
             </div>
         )
     }

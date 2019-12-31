@@ -9,9 +9,13 @@
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+#list ul{
+    margin-right: 50px;
+}
 #listTitle{
     display: inline-flex;
     margin-top: 20px;
+   
 }
 #listTitle img{
     height:80px;
@@ -22,13 +26,30 @@
     display:flex;
     justify-content: center;
     color:white;
+     background-color: rgb(61, 107, 61);
 }
 #listItem{
-    margin-top: 50px;
+    margin: 50px;
     display:block;
     justify-content: center;
 }
 #listItem h4{
     font-style: italic;
     color:#af7a39;
+}
+#total{
+    margin-top: 60px;
+    display:flex;
+    justify-content: space-around;
+}
+#total div::first-line{
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+.totCal {
+    font-size: 36px;
+}
+#ulItem{
+    display:flex;
+    justify-content: space-around;
 }

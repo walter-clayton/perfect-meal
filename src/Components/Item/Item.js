@@ -1,19 +1,21 @@
 import React, { Component } from 'react'
 import './Item.css'
 import carbs from './wheat.svg'
-
+import protein from './proteins.svg'
+import fat from './candy.svg'
+import Button from '@material-ui/core/Button';
 export class Item extends Component {
 constructor(){
     super()
     this.state={
         id:"",
         name:"",
+        list:[]
         
     }
 }
 
     render() {
-        console.log("props item"+this.props.item)
         return (
             <div id="cont">
                 <div id="header">
@@ -27,14 +29,17 @@ constructor(){
                     {this.props.item ? <p>{Math.floor((this.props.item.glu/this.props.item.tot)*100)}%</p> : ""}
                     </div>
                     <div>
-                    <img src={carbs}></img>
+                    <img src={protein}></img>
                     <p>2. Proteins</p>
                     {this.props.item ? <p>{Math.floor((this.props.item.prot/this.props.item.tot)*100)}%</p> : ""}
                     </div>
                     <div>
-                    <img src={carbs}></img>
+                    <img src={fat}></img>
                     <p>3. Fat</p>
                     {this.props.item ? <p>{Math.floor((this.props.item.fat/this.props.item.tot)*100)}%</p> : ""}
+                    <Button className="addBtn" variant="outlined" onClick={()=> this.props.add()}>
+                    Add to meal
+                </Button>
                     </div>
                 </div>
             </div>
