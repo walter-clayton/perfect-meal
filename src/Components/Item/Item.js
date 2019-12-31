@@ -15,7 +15,7 @@ constructor(){
     render() {
         console.log("props item"+this.props.item)
         return (
-            <div>
+            <div id="cont">
                 <div id="header">
         {this.props.name !="" ? <h1>{ this.props.name}</h1> : <h1>Enter an Item</h1>}
         {this.props.item ? <p id="cal">{this.props.item.cal} kcal</p> : ""}  

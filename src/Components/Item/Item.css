@@ -6,12 +6,17 @@
     padding-bottom: 20px;
     position: relative;
     bottom:40px;
+    /* background-color: rgb(61, 107, 61); */
 }
+/* #cont{
+    background-color: rgb(61, 107, 61);
+} */
 #nutriments{
     display:flex;
     justify-content: center;
     position: relative;
     bottom:40px;
+    /* background-color: rgb(61, 107, 61); */
 }
 #nutriments p{
     color:white;

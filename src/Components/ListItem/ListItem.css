@@ -1,0 +1,34 @@
+#list{
+    min-height:500px;
+    width:1000px;
+    text-align: center;
+    background-color: rgb(61, 107, 61);
+}
+#list h2{
+    color:white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+#listTitle{
+    display: inline-flex;
+    margin-top: 20px;
+}
+#listTitle img{
+    height:80px;
+    margin-left: 20px;
+}
+
+.list{
+    display:flex;
+    justify-content: center;
+    color:white;
+}
+#listItem{
+    margin-top: 50px;
+    display:block;
+    justify-content: center;
+}
+#listItem h4{
+    font-style: italic;
+    color:#af7a39;
+}

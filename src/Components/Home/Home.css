@@ -1,5 +1,6 @@
 #home{
     text-align: center;
+    
 }
 .title{
     text-align: center;
@@ -7,6 +8,17 @@
     text-transform: uppercase;
     font-size:56px;
     letter-spacing: 10px;
+}
+.title2{
+    position: relative;
+    bottom:20px;
+    right:140px;
+    text-align: center;
+    color:#da3528;
+    text-transform: uppercase ;
+    text-decoration: underline;
+    font-size:12px;
+    letter-spacing: 2px;
 }
 #logo{
     display:block;

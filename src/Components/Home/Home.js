@@ -5,7 +5,7 @@ import './Home.css'
 import Item from '../Item/Item'
 import logo from  './dish.svg'
 import Autocomplete from '@material-ui/lab/Autocomplete';
-
+import ListItem from '../ListItem/ListItem'
 export class Home extends Component {
     constructor(){
         super()
@@ -105,6 +105,7 @@ export class Home extends Component {
         return (
             <div id="home">
                 <h1 className="title" > The Perfect Meal</h1>
+                <h3 className="title2">Make yours</h3>
                 <img id="logo" src={logo}></img>
                 <div id="form">
                 <Autocomplete
@@ -121,7 +122,7 @@ export class Home extends Component {
                 </Button>
                 </div>
                 <Item name={this.state.name} item={this.state.item} />
-                
+                <ListItem />
             </div>
         )
     }
