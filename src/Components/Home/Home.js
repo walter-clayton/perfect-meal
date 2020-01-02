@@ -116,6 +116,7 @@ export class Home extends Component {
             <div id="home">
                 <h1 className="title" > The Perfect Meal</h1>
                 <h3 className="title2">Make yours</h3>
+               <div className="border">
                 <img id="logo" src={logo}></img>
                 <div id="form">
                 <Autocomplete
@@ -130,6 +131,7 @@ export class Home extends Component {
                 <Button variant="outlined" color="secondary" onClick={()=> this.search()}>
                     Search
                 </Button>
+                </div>
                 </div>
                 <Item name={this.state.name} item={this.state.item} add={() => this.addItem()} />
                 <ListItem list={this.state.listItem} />

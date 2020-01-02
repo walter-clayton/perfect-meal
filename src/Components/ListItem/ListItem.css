@@ -3,11 +3,13 @@
     width:1000px;
     text-align: center;
     background-color: rgb(61, 107, 61);
+    
 }
 #list h2{
     color:white;
     text-transform: uppercase;
     letter-spacing: 2px;
+    
 }
 #list ul{
     margin-right: 50px;
@@ -32,6 +34,7 @@
     margin: 50px;
     display:block;
     justify-content: center;
+  
 }
 #listItem h4{
     font-style: italic;
@@ -52,4 +55,5 @@
 #ulItem{
     display:flex;
     justify-content: space-around;
+    border:5px solid black;
 }

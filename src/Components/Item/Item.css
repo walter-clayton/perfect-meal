@@ -10,6 +10,7 @@
 }
 #cont{
     background-color: rgb(61, 107, 61);
+    border-bottom: 5px solid black;
 }
 #nutriments{
     display:flex;
