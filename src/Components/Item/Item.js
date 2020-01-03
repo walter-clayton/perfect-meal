@@ -19,27 +19,27 @@ constructor(){
         return (
             <div id="cont">
                 <div id="header">
-        {this.props.name !="" ? <h1>{ this.props.name}</h1> : <h1>Enter an Item</h1>}
+        {this.props.name !="" ? <h1>{ this.props.name}</h1> : <h1>Enter an Aliment</h1>}
         {this.props.item ? <p id="cal">{this.props.item.cal} kcal</p> : ""}  
                 </div>
                 <div id="nutriments">
                     <div>
                     <img src={carbs}></img>
-                    <p>1. Carbs</p>
+                    <p>Carbs</p>
                     {this.props.item ? <p>{Math.floor((this.props.item.glu/this.props.item.tot)*100)}%</p> : ""}
                     </div>
                     <div>
                     <img src={protein}></img>
-                    <p>2. Proteins</p>
+                    <p>Proteins</p>
                     {this.props.item ? <p>{Math.floor((this.props.item.prot/this.props.item.tot)*100)}%</p> : ""}
                     </div>
                     <div>
                     <img src={fat}></img>
-                    <p>3. Fat</p>
+                    <p>Fat</p>
                     {this.props.item ? <p>{Math.floor((this.props.item.fat/this.props.item.tot)*100)}%</p> : ""}
-                    <Button className="addBtn" variant="outlined" onClick={()=> this.props.add()}>
+                    <Button className="addBtn" variant="outlined" color="default" onClick={()=> this.props.add()}>
                     Add to meal
-                </Button>
+                    </Button>
                     </div>
                 </div>
             </div>

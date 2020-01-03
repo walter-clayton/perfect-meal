@@ -1,59 +1,79 @@
 #list{
-    min-height:500px;
+    min-height:250px;
     width:1000px;
     text-align: center;
-    background-color: rgb(61, 107, 61);
     
 }
-#list h2{
-    color:white;
+#list h1{
+    color: #764e88;
     text-transform: uppercase;
     letter-spacing: 2px;
     
+}
+
+#list h2{
+    color: #764e88;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin:0;
 }
 #list ul{
     margin-right: 50px;
 }
 #listTitle{
-    display: inline-flex;
+    display: block;
+    align-content: center;
     margin-top: 20px;
    
 }
 #listTitle img{
-    height:80px;
+    height:40px;
     margin-left: 20px;
+    position: relative;
+    bottom: 35px;
+    right: 10px;
 }
 
 .list{
-    display:flex;
+    display:inline-block;
     justify-content: center;
-    color:white;
-     background-color: rgb(61, 107, 61);
+    color:rgb(0, 0, 0);
 }
 #listItem{
     margin: 50px;
-    display:block;
+    display:inline-block;
     justify-content: center;
   
 }
 #listItem h4{
     font-style: italic;
-    color:#af7a39;
+    color:#62486e!important;
 }
 #total{
-    margin-top: 60px;
     display:flex;
     justify-content: space-around;
+    width: 100%;
+    background-color: #4C3258;
+}
+#total h3{
+    font-weight: 500;
 }
 #total div::first-line{
     text-transform: uppercase;
     text-decoration: underline;
+    color:white;
 }
 .totCal {
     font-size: 36px;
+    color:white;
+    /* color:#B3404A;     */
 }
 #ulItem{
-    display:flex;
-    justify-content: space-around;
-    border:5px solid black;
+    /* background: linear-gradient(162deg, rgb(245, 172, 251) 0%, rgba(255,255,255,0) 100%); */
+    display:inline-block;
+    justify-content: center;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.239);
+    width: 950px;
+
 }

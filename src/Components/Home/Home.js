@@ -16,6 +16,7 @@ export class Home extends Component {
             itemObj:{},
             five:[],
             listItem:[],
+            msg:""
 
         }
     }
@@ -70,6 +71,7 @@ export class Home extends Component {
                             glu:data.nf_total_carbohydrate,
                             tot:data.nf_protein+data.nf_total_fat+data.nf_total_carbohydrate    
                         }
+                        
                     })}
                     catch(err){
                         console.log(err);
@@ -77,7 +79,6 @@ export class Home extends Component {
                 })
     }
     getFive(value){
-        
         this.setState({
             five:[]
         })
@@ -107,15 +108,28 @@ export class Home extends Component {
         let list=this.state.listItem;
         list.push(this.state.item)
         this.setState({
+            listItem:list,
+            name:"",
+            item:"",
+            msg:"Added !"
+        })
+    }
+    delete(number){
+        console.log(number)
+        console.log(this.state.listItem[number])
+        let list=this.state.listItem;
+        list.splice(number,1)
+        this.setState({
             listItem:list
         })
     }
+
     render() {
         console.log(this.state)
         return (
             <div id="home">
                 <h1 className="title" > The Perfect Meal</h1>
-                <h3 className="title2">Make yours</h3>
+                {/* <h3 className="title2">Make yours</h3> */}
                <div className="border">
                 <img id="logo" src={logo}></img>
                 <div id="form">
@@ -134,7 +148,7 @@ export class Home extends Component {
                 </div>
                 </div>
                 <Item name={this.state.name} item={this.state.item} add={() => this.addItem()} />
-                <ListItem list={this.state.listItem} />
+                <ListItem list={this.state.listItem} delete={(number)=>this.delete(number)} />
             </div>
         )
     }

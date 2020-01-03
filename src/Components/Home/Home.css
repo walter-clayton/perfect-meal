@@ -1,25 +1,34 @@
+
 #home{
     text-align: center;
-    padding-left: 100px;;
-    padding-right: 100px;
+    /* background-color: rgba(202, 202, 189, 0.726); */
+    background-color: rgba(235, 209, 236, 0.726);
+    /* margin-left: 5%;
+    margin-right: 5%; */
     
 }
-.border{
-    
-}
+
+
 .title{
     text-align: center;
-    color:#da3528;
+    color:beige;
     text-transform: uppercase;
     font-size:56px;
     letter-spacing: 10px;
+    /* background-color: rgb(238, 201, 201); */
+    background-color: #4c3258;;
+    margin: 0;
+    padding: 20px 0px 20px 0px;
+
+
 }
 .title2{
     position: relative;
     bottom:20px;
     right:140px;
     text-align: center;
-    color:#da3528;
+    color:#680c13;
+
     text-transform: uppercase ;
     text-decoration: underline;
     font-size:12px;
@@ -52,4 +61,8 @@
     position: relative;
     top:23px;
     left:23px;
+}
+
+.border{
+    padding-top: 40px;
 }

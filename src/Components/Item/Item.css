@@ -1,38 +1,41 @@
 #header{
-    color:white;
-    background-color: rgb(105, 194, 105);
-    height: 180px;
+    color:#b3404a;
+    /* background-color: rgb(105, 194, 105); */
+    /* background-color: #f4b2b0; */
+    height: 130px;
     font-size: 36px;
     padding-bottom: 20px;
     position: relative;
     bottom:40px;
-    background-color: rgb(61, 107, 61);
+    /* background-color: rgb(61, 107, 61); */
 }
 #cont{
-    background-color: rgb(61, 107, 61);
-    border-bottom: 5px solid black;
+    /* background-color: #f4b2b0; */
 }
 #nutriments{
+    margin-top: 50px;
     display:flex;
     justify-content: center;
     position: relative;
     bottom:40px;
+    
     /* background-color: rgb(61, 107, 61); */
 }
 .addBtn{
     position: relative;
-    bottom:90px;
+    bottom:100px;
     left:300px;
     height: 60px;
     width:150px;
-    background-color: rgb(105, 194, 105)!important;
+    background-color: #62486e!important;
+    /* background-color: rgb(105, 194, 105)!important; */
+    border: none;
 }
 .addBtn .MuiButton-label{
-    color:white;
+    color:rgb(255, 255, 255);
     font-weight: bolder;
 }
 #nutriments p{
-    color:white;
     font-size:24px;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -40,11 +43,14 @@
     top:20px;
 }
 #nutriments div{
-    margin:20px;
-    background-color: rgb(105, 194, 105);
+    margin-right:50px;
+    /* background-color: rgb(105, 194, 105); */
+    background-color: whitesmoke;
     width:200px;
     height:200px;
     border-radius: 50%;
+    border : 20px solid #694772;
+    
 }
 #nutriments img{
     position: relative;
@@ -55,8 +61,12 @@
 #cal{
     position:relative;
     bottom:20px;
+    color: #7d5590;
 }
 #header h1{
-    padding-top: 50px;
+    padding: 20px 0px 20px 0px;
+    margin-top: 100px;
+    color: #4c3258;
     font-size: 50px;
+
 }
