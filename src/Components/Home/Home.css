@@ -34,6 +34,20 @@
     font-size:12px;
     letter-spacing: 2px;
 }
+.MuiButton-outlinedSecondary{
+    color:inherit;
+    border:1px solid #4c3258!important;
+}
+.MuiOutlinedInput-notchedOutline{
+    border:1px solid #4c3258!important;
+}
+.MuiInputLabel-outlined{
+    color:#4c3258!important;
+}
+.MuiButton-outlinedSecondary{
+    color:#4c3258!important;
+    font-weight: 400!important;
+}
 #logo{
     display:block;
     margin-left: auto;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './ListItem.css'
 import cooker from '../../cooker.svg'
+import Button from '@material-ui/core/Button'
 export class ListItem extends Component {
     constructor(props){
         super(props)
@@ -11,29 +12,28 @@ export class ListItem extends Component {
         }
     }
 
-    checkout(){
-        if(this.state.list.length>0){
-            console.log("on rentre")
-            let temp=<b></b>
-            for(var i =0 ; i < this.state.list ; i++){
-                temp=temp+<li id="listItem">
-                <h3>{this.state.list[i].name}</h3>
-                <h4> {this.state.list[i].cal} </h4>
-                <div>
-                <p>Proteins : {this.state.list[i].prot}</p>
-                <p>Carbs : {this.state.list[i].glu}</p>
-                <p>Fat : {this.state.list[i].fat} </p>
-                <button key= {i}>Delete</button>
-                </div>
-            </li>;
-            }
-            this.div=temp;
-            console.log(this.div)
-        }
-    }
+    // checkout(){
+    //     if(this.state.list.length>0){
+    //         console.log("on rentre")
+    //         let temp=<b></b>
+    //         for(var i =0 ; i < this.state.list ; i++){
+    //             temp=temp+<li id="listItem">
+    //             <h3>{this.state.list[i].name}</h3>
+    //             <h4> {this.state.list[i].cal} </h4>
+    //             <div>
+    //             <p>Proteins : {this.state.list[i].prot}</p>
+    //             <p>Carbs : {this.state.list[i].glu}</p>
+    //             <p>Fat : {this.state.list[i].fat} </p>
+    //             <button key= {i}>Delete</button>
+    //             </div>
+    //         </li>;
+    //         }
+    //         this.div=temp;
+    //         console.log(this.div)
+    //     }
+    // }
     render() {
         const list = this.state.list.map((elem, index) => (
-            
             <li key={index} id="listItem">
                      <h3>{elem.name}</h3>
                       <h4>{elem.cal}kcal</h4>
@@ -41,10 +41,11 @@ export class ListItem extends Component {
                       <p>Proteins : {elem.prot}g </p>
                       <p>Carbs : {elem.glu}g </p>
                       <p>Fat : {elem.fat}g </p>
-                      <button onClick={() => this.props.delete(index)}>Delete</button>
+                      <Button variant="outlined" color="secondary" onClick={()=> this.props.delete(index)}>
+                    Delete
+                        </Button>
                       </div>
                   </li>
-            
         ))
         let totcal=0;
         let totprot=0;
@@ -56,7 +57,6 @@ export class ListItem extends Component {
             totfat=totfat+elem.fat;
             totglu=totglu+elem.glu
         })
-        console.log(this.state.list)
         return (
             <div>
             <div className="list">

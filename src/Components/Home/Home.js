@@ -138,7 +138,7 @@ export class Home extends Component {
                     freeSolo
                     options={this.state.five.map(item => item)}
                     renderInput={params => (
-                        <TextField id="input"{...params} label="examples:'egg','bacon...'" onChange={(e)=> this.getFive(e.target.value)} margin="normal" color="secondary"  variant="outlined" />
+                        <TextField id="input"{...params} label="examples:'egg','bacon'..." onChange={(e)=> this.getFive(e.target.value)} margin="normal" color="secondary"  variant="outlined" />
                     )}
                 />
 
